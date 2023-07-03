@@ -1,8 +1,11 @@
+import Footer from '@/comps/Footer'
+import Navbar from '@/comps/Navbar'
 import React from 'react'
 
 export default function Home() {
   return (
     <div>
+		<Navbar/>
       	<p>
 			Lorem ipsum dolor sit amet consectetur, 
 			adipisicing elit. Aut sunt quia neque recusandae error. Accusamus consequuntur debitis similique 
@@ -22,6 +25,7 @@ export default function Home() {
 			beatae, atque possimus, commodi similique, sint enim itaque. Explicabo soluta minus numquam veritatis
 			neque doloremque cum tempora optio, a quisquam, adipisci est saepe debitis ipsam eius.
     	</p>
+		<Footer/>
     </div>
   )
 }
