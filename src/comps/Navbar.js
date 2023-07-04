@@ -1,11 +1,13 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
 
 export default function Navbar() {
   return (
     <nav>
         <div className="logo">
-            <h1>Ninja List</h1>
+          {/* src is the path in the public folder & Image is a NextJS componet and needs the height and width property*/}
+            <Image src="/logo.png" alt="" width={120} height={77} />
         </div>
         
         <Link href="/">Home</Link>
