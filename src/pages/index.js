@@ -1,12 +1,14 @@
+import Link from 'next/link'
 import Footer from '@/comps/Footer'
 import Navbar from '@/comps/Navbar'
 import React from 'react'
+import styles from '../styles/home.module.css'
 
 export default function Home() {
   return (
     <div>
-		<Navbar/>
-      	<p>
+		<h1 className={styles.title}>Home Page</h1>
+      	<p className={styles.text}>
 			Lorem ipsum dolor sit amet consectetur, 
 			adipisicing elit. Aut sunt quia neque recusandae error. Accusamus consequuntur debitis similique 
 			facilis nam iste veritatis sapiente ullam omnis reprehenderit ea, quos temporibus eligendi impedit 
@@ -25,7 +27,11 @@ export default function Home() {
 			beatae, atque possimus, commodi similique, sint enim itaque. Explicabo soluta minus numquam veritatis
 			neque doloremque cum tempora optio, a quisquam, adipisci est saepe debitis ipsam eius.
     	</p>
-		<Footer/>
+
+		<Link href="/ninjas">
+			<div className={styles.btn}>See All Ninjas</div>
+		</Link>
+
     </div>
   )
 }
