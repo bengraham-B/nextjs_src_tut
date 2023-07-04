@@ -20,6 +20,7 @@ export const getStaticProps = async () => {
 
 import React from 'react'
 import styles from '../../styles/ninjas.module.css'
+import Link from 'next/link'
 
 
 
@@ -28,11 +29,12 @@ export default function Ninjas( {ninjas}) {
     <div>
         <h1>All Ninjas</h1>
 		{ninjas.map(ninja => (
-			<div key={ninja.id}>
-				<a className={styles.single}> 
+			//& This below is dynamic routes 
+			<Link href={'/ninjas/' + ninja.id} key={ninja.id}>
+				<div className={styles.single}> 
 					<h3>{ninja.name}</h3>
-				</a>
-			</div>
+				</div>
+			</Link>
 		))}
     </div>
   )
